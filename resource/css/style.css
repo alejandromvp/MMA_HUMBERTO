@@ -3,6 +3,9 @@
 font-family: 'Oswald', sans-serif;
 }
 
+#titulo{
+	margin-top: -15px;
+}
 body{
 	background: #f3f3f4 url(../../resource/img/grey_wood.jpg) repeat fixed center center;
   }
@@ -90,6 +93,4 @@ a{
 
 .style-thick .separator-holder{
     border-top-width: 15px;}
-.segundo_item{
-	margin-top: 0px;
-	}
+

@@ -12,12 +12,15 @@
     a.slidesjs-previous,
     a.slidesjs-play,
     a.slidesjs-stop {
-      background-image: url(img/btns-next-prev.png);
+      background-image: url(../img/btns-next-prev.png);
       background-repeat: no-repeat;
       display:block;
       width:12px;
       height:18px;
-      
+      overflow: hidden;
+      text-indent: -9999px;
+      float: left;
+      margin-right:5px;
       
       
       
@@ -74,7 +77,7 @@
       width: 13px;
       height: 0;
       padding-top: 13px;
-      background-image: url(img/pagination.png);
+      background-image: url(../img/pagination.png);
       background-position: 0 0;
       float: left;
       overflow: hidden;
