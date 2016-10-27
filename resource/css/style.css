@@ -19,7 +19,7 @@ h1 img{
 }
 
 #menu{
-	float: none;
+	display: flex;
 	height: 2.2cm;
 	min-height: initial;
 	text-align: center;
