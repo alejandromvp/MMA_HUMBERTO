@@ -1,3 +1,6 @@
+* {
+ font-family: 'Oswald', sans-serif;
+}
 
 .social ul{
   list-style: none;
@@ -51,15 +54,55 @@
   box-shadow:         inset 0px 0px 0px -1px #1f1f1f;
 }
 
-.social ul li:hover{
-  -moz-box-shadow:    inset 100px 0px 0px 0px #1f1f1f;
-  -webkit-box-shadow: inset 100px 0px 0px 0px #1f1f1f;
-  box-shadow:         inset 100px 0px 0px 0px #1f1f1f;
+.social ul li.fb{
+  -moz-box-shadow:    inset 0px 0px 0px -1px #3b5998;
+  -webkit-box-shadow: inset 0px 0px 0px -1px #3b5998;
+  box-shadow:         inset 0px 0px 0px -1px #3b5998;
+}
+
+.social ul li.fb:hover{
+  -moz-box-shadow:    inset 100px 0px 0px 0px #3b5998;
+  -webkit-box-shadow: inset 100px 0px 0px 0px #3b5998;
+  box-shadow:         inset 100px 0px 0px 0px #3b5998;
 
 }
 
-.social ul li:hover span{
+.social ul li.fb:hover span{
   color: #eee;
+}
+
+.social ul li.ig{
+  -moz-box-shadow:    inset 0px 0px 0px -1px #1D446F;
+  -webkit-box-shadow: inset 0px 0px 0px -1px #1D446F;
+  box-shadow:         inset 0px 0px 0px -1px #1D446F;
+}
+
+.social ul li.ig:hover{
+  -moz-box-shadow:    inset 100px 0px 0px 0px #1D446F;
+  -webkit-box-shadow: inset 100px 0px 0px 0px #1D446F;
+  box-shadow:         inset 100px 0px 0px 0px #1D446F;
+
+}
+
+.social ul li.ig:hover span{
+  color: #eee;
+}
+
+.social ul li.yt{
+  -moz-box-shadow:    inset 0px 0px 0px -1px #333333;
+  -webkit-box-shadow: inset 0px 0px 0px -1px #333333;
+  box-shadow:         inset 0px 0px 0px -1px #333333;
+}
+
+.social ul li.yt:hover{
+  -moz-box-shadow:    inset 100px 0px 0px 0px #333333;
+  -webkit-box-shadow: inset 100px 0px 0px 0px #333333;
+  box-shadow:         inset 100px 0px 0px 0px #333333;
+
+}
+
+.social ul li.yt:hover span{
+  color: #FF3333;
 }
 
 .social ul li span{
@@ -85,6 +128,11 @@
 
 .contact-icon span{
   font-size: 28px;
+  color: #219452;
+}
+
+.contact-container{
+
 }
 
 .contact-info {
@@ -152,11 +200,11 @@
   -ms-justify-content: center;
   -moz-justify-content: center;
   justify-content: center;
-}
-
-.contact-map img{
   max-width: 100%;
   height: auto;
+}
+
+.contact-map iframe{
   border-radius: 4px;
 
   -webkit-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.55);
