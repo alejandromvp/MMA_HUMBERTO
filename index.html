@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lan="es">
 <head>
 	<meta charset="UTF-8">
 	<title>Academia de Jiu Jitsu Humberto Fuentes</title>
 	<link rel="shortcut icon" href="resource/img/fabicon">
-	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="./resource/css/style.css" />
-	<link rel="stylesheet" type="text/css" href="./resource/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen">
 	<link rel="stylesheet" type="text/css" href="css/slider.css" media="screen"/>
 	<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Oswald|Slabo+27px" rel="stylesheet">
@@ -19,7 +19,7 @@
     $(function() {
       $('#slides').slidesjs({
         width: 1100,
-        height: 400,
+        height: 550,
         play: {
           active: true,
           auto: true,
@@ -30,10 +30,10 @@
     });
   </script>
 </head>
-<body>
-		<div class="container-fluid">
+<body >
+		<div class="container">
 			<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-11">
 				<div id="titulo">
 					<h1 class="titulo_h1"> 
         				<a href="index.html"><img src="resource/img/logo_academia_sin_fondo.png" alt="Titulo de mi pagina web"  width="100px" height="100px" /></a>ACADEMIA VULCÁO DO FOGO 
@@ -41,9 +41,11 @@
         			</h1>
 
         		</div> <!-- cierre clase titulo -->
+     </div>
+     <div class="col-md-1">
 				<div class="caja-redes">
 						<a href="https://www.facebook.com/Academia.JiuJitsu.Humberto.Fuentes/?fref=ts" class="icon-button facebook"  target="_blank"><i class="icon-facebook"></i><span></span></a>
-						<a href="https://www.instagram.com/vulcao_do_fogo/" class="icon-button"  target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i><span></span></a>
+						<a href="https://www.instagram.com/vulcao_do_fogo/" class="icon-button2"  target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i><span></span></a>
    				</div>
 
 				
@@ -55,7 +57,7 @@
 		<div class="col-md-12">
 		  <nav id="menu">
 			<ul class="menu_items">
-				<li><a href="">INICIO</a></li>
+				<li><a href="index.html"><span style="color:white">INICIO</span></a></li>
 				<li><a href="">NUESTRAS CLASES</a></li>
 				<li><a href="">CLASE GRATIS</a></li>
 				<li><a href="">NOTICIAS</a></li>
@@ -63,26 +65,26 @@
 				<li><a href="">HORARIOS</a></li>
 			</ul>
 		</nav>
+    </div> <!-- termina div de com-md-12 -->
 		
-			
+		<div class="col-md-12">	
 				<div id="slides">
-      				<img src="resource/img/fotos/slider/academia.jpg" alt="Photo by: Missy S Link: http://www.flickr.com/photos/listenmissy/5087404401/" height="600px">
-      				<img src="resource/img/fotos/slider/ven.jpg" alt="Photo by: Daniel Parks Link: http://www.flickr.com/photos/parksdh/5227623068/" height="600px">
-      				<img src="resource/img/fotos/slider/promocion.jpg" alt="Photo by: Mike Ranweiler Link: http://www.flickr.com/photos/27874907@N04/4833059991/" height="600px">
-      				<img src="resource/img/fotos/slider/jiujitsu_grupo.jpg" alt="Photo by: Stuart SeegerLink: http://www.flickr.com/photos/stuseeger/97577796/" height="600px">
+      				<img src="resource/img/fotos/slider/academia.jpg" alt="Photo by: Missy S Link: http://www.flickr.com/photos/listenmissy/5087404401/" >
+      				<img src="resource/img/fotos/slider/ven.jpg" alt="Photo by: Daniel Parks Link: http://www.flickr.com/photos/parksdh/5227623068/">
+      				<img src="resource/img/fotos/slider/promocion.jpg" alt="Photo by: Mike Ranweiler Link: http://www.flickr.com/photos/27874907@N04/4833059991/">
+      				<img src="resource/img/fotos/slider/jiujitsu_grupo.jpg" alt="Photo by: Stuart SeegerLink: http://www.flickr.com/photos/stuseeger/97577796/">
       				
     			</div>
-    	</div> <!-- cierre col-md-12 -->
+   </div> <!-- cierre col-md-12 -->
 
-    	<div class="row" style="margin-top:700px;margin-bottom:100px">
+    <div class="col-md-12">
+    	<div class="row" style="margin-top:100px;margin-bottom:100px">
+      <div class="col-lg-4" style="text-align:center;">-----------------------------</div>
+      <div class="col-lg-4" style="text-align:center;"><span style="font-size:30px">Nuestras Clases</span></div>
       <div class="col-lg-4" style="text-align:center;">
-        ----------------------------------------------
+        ----------------------------------------------</div>
       </div>
-      <div class="col-lg-4" style="text-align:center;">Nuestras Clases</div>
-      <div class="col-lg-4" style="text-align:center;">
-        ----------------------------------------------
-      </div>
-      </div>
+  </div> <!-- cierre col-md-12 -->
 
       <div class="row">
         <div class="col-lg-4" style="text-align:center;">
@@ -104,8 +106,22 @@
           <p>MMA artes marciales mixtas, son un deporte de combate pleno que mezcla diferentes disciplinas tales como boxeo, taekwondo, muay thai, judo, lucha, jiu jitsu entre otras. Este deporte incorpora golpes, puños, patadas, técnicas de lucha agarres y lanzamientos.</p>
           <p><a class="btn btn-default" href="#" role="button">Ver detalles »</a></p>
         </div><!-- /.col-lg-4 -->
+
       </div> <!-- cierre Row -->
 
-	</div> <!-- cierre container fluid -->
+      <div class="row" style="margin-top:100px;">
+          <div class="col-md-12"> 
+              <div class="col-md-7">
+                  <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+                  <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+              </div>
+          <div class="col-md-5">
+              <video src="resource/video/video-vulcao.mp4" controls autoplay loop muted preload="auto" poster="demo.jpg" >
+              </video>
+        </div>
+      </div>
+    </div>
+
+</div> <!-- cierre container fluid -->
 </body>
 </html>

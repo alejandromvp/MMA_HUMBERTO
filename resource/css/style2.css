@@ -1,16 +1,26 @@
 
 
 .caja-redes{
-	margin-top: -100px;
-	float: right;
+	margin-top: 30px;
 }
 .caja-redes a {
 	text-align: center;
-	font-size: 20px;
+	font-size: 10px;
 	
 }
 .icon-button {
-	background: #f3f3f4 url(../../resource/img/textura_negra.png) repeat fixed center center;
+	background: #3B5998;
+	border-radius: 3em;
+	cursor: pointer;
+	display: inline-block;
+	height: 3em;
+	line-height: 3em;
+	margin: 0 30px;
+	position: relative;
+	width: 3em;
+}
+.icon-button2 {
+	background:black;
 	border-radius: 3em;
 	cursor: pointer;
 	display: inline-block;
@@ -50,7 +60,7 @@
 	background-color: #4099ff;
 }
 .facebook span {
-	background-color: #3B5998;
+	background-color: black;
 }
 .google-plus span {
 	background-color: #db5a3c;
@@ -81,6 +91,9 @@
 }
 .icon-button .icon-twitter {
 	color: #4099ff;
+}
+.icon-button2 .fa-instagram {
+	color: white;
 }
 .icon-button .icon-facebook {
 	color: white;
