@@ -17,7 +17,7 @@ nav li a, nav li a:hover, nav li a:focus {
 nav {
   background-color: #ececec;
   min-height: 47px;  /* NAV HEIGHT */
-  width: 100vw;
+  width: 100%;
   position: absolute;
   left: 0;
   z-index: 100;
@@ -171,4 +171,64 @@ nav {
       position: fixed;
       top: 0;
     }
+}
+
+
+/* Estilos para titulo con barras laterales */
+
+.bgrow-center {
+  -moz-display: flex;
+  -webkit-display: flex;
+  -ms-display: flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+}
+
+.bigtittle-overhidde {
+  -moz-display: flex;
+  -webkit-display: flex;
+  -ms-display: flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  width: 85%;
+  overflow: hidden;
+}
+
+.bigtittle-overhidde span{
+  position: relative;
+  font-family: Oswald;
+  font-size: 37px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0 50px 0;
+  color: #444; /* Color del GRAN TITULO */
+}
+
+.bigtittle-overhidde span:before, .bigtittle-overhidde span:after{
+  content: "";
+  position: absolute;
+  background-color: #555;  /* Color de las barras laterales */
+  height: 6px;
+  width: 500px;
+  top: 25px;
+}
+
+.bigtittle-overhidde span:before{
+  right: -550px;
+}
+
+.bigtittle-overhidde span:after{
+  left: -550px;
+}
+
+@media screen and (max-width: 767px) {
+  .bigtittle-overhidde {
+    width: 100%;
+  }
 }
