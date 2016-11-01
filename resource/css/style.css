@@ -7,7 +7,7 @@ font-family: 'Oswald', sans-serif;
 	margin-top: -15px;
 }
 body{
-	background: #f3f3f4 url(../../resource/img/grey_wood.jpg) repeat fixed center center;
+	background: #FFFFFF url(../../resource/img/textura_footer.png) repeat center top;
   }
 
 .titulo_h1{
@@ -94,4 +94,35 @@ a{
 
 .style-thick .separator-holder{
     border-top-width: 15px;}
+
+.footer{
+	background: #0c0c0c url(../../resource/img/textura_footer.png) repeat center top;
+	height: 150px;
+	width: 100%;
+	margin-top: 30px;
+	color:white;
+	text-align: center;
+}
+
+.context_footer .col-md-12{
+	margin-top:60px;
+}
+.img_footer{
+	margin-bottom: 150px;
+}
+
+.lista_footer li a{
+	color:white;
+	
+}
+.li_footer{
+	list-style: none;
+}
+
+.lista_footer ul li {
+	display: inline-block;
+	padding: 8px 20px;
+}
+
+
 

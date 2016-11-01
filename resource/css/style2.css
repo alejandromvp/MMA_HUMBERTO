@@ -104,3 +104,7 @@
 .icon-button:hover .icon-linkedin, .icon-button:hover .icon-pinterest, .icon-button:hover .icon-twitter, .icon-button:hover .icon-facebook, .icon-button:hover .icon-google-plus {
 	color: white;
 }
+
+.fa-facebook{
+	color:white;
+}
