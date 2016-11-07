@@ -2,7 +2,7 @@ nav *{
   margin: 0;
   padding: 0;
   list-style: none;
-  font-family: Oswald, sans-serif;
+  font-family: 'Oswald', sans-serif;
 }
 
 nav li a, nav li a:hover, nav li a:focus {
