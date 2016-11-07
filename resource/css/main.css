@@ -3,22 +3,6 @@
   padding: 0;
   border: 0; }
 
-header {
-  height: 70px;
-  background-color: #202224;
-  position: relative;
-  z-index: 200;
-  display: flex !important;
-  align-items: center; }
-  header .container, header .row {
-    height: 40px; }
-  header .sticky {
-    width: 100%;
-    background-color: #202224; }
-  header .sticky-fix {
-    position: fixed;
-    top: 0; }
-
 .parallax-bg {
   position: absolute;
   width: 100%;
@@ -72,41 +56,7 @@ header {
   min-height: 100px;
   max-height: 85vh; }
 
-.nav-links {
-  height: 100%;
-  float: right;
-  width: 60%; }
-  .nav-links * {
-    height: 100%; }
-  .nav-links ul {
-    margin: 0;
-    width: 100%;
-    list-style: none;
-    display: flex;
-    flex-flow: row;
-    justify-content: flex-end; }
-    .nav-links ul li {
-      margin: 0 0 0 16px; }
-      .nav-links ul li a {
-        position: relative;
-        text-decoration: none;
-        display: block;
-        padding: 4px 4px 2px 4px;
-        font-size: 17px;
-        font-family: 'Roboto', sans-serif;
-        color: #ddd; }
-        .nav-links ul li a:after {
-          content: "";
-          position: absolute;
-          bottom: 8px;
-          width: 0%;
-          height: 3px;
-          background-color: #b71c1c;
-          left: 50%;
-          transform: translateX(-50%);
-          transition: all .2s ease; }
-        .nav-links ul li a:hover:after {
-          width: 90%; }
+
 
 .aboutus {
   background-color: #202224;
