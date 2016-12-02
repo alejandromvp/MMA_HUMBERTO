@@ -1,6 +1,11 @@
 *{
-	font-family: 'Slabo 27px', serif;
+font-family: 'Slabo 27px', serif;
 font-family: 'Oswald', sans-serif;
+}
+
+@font-face {
+font-family: Moyko;
+src: url('../fuente/Moyko.ttf');
 }
 
 #titulo{
@@ -122,6 +127,11 @@ a{
 .lista_footer ul li {
 	display: inline-block;
 	padding: 8px 20px;
+}
+
+.fuentexd{
+	font-family:Moyko;
+	font-size: 50px;
 }
 
 

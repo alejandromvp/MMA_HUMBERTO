@@ -12,6 +12,7 @@ font-family: 'Oswald', sans-serif;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+ 
 
   -webkit-justify-content: space-around;
   -ms-justify-content: space-around;

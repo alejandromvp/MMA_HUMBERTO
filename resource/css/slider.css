@@ -3,7 +3,7 @@
   padding: 0; }
 
 .slider {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.2);
   position: relative;
   overflow: hidden; }
   .slider, .slider > .ul-cont > ul, .slider > .ul-cont > ul > li {
@@ -19,7 +19,8 @@
       top: 0; }
       .slider > .ul-cont > ul > li > img {
         width: 100%;
-        height: auto;
+        /*height: auto;  para que el alto no ocupe todo el alto y halla efecto paralax*/
+        height: 100%;
         position: absolute;
         top: 50%;
         left: 50%;

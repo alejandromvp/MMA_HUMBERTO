@@ -24,7 +24,20 @@
     <link rel="stylesheet" href="./resource/css/slider.css" media="screen" title="no title">
     <link rel="stylesheet" href="./resource/css/main.css" media="screen" title="no title">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Montserrat:700|Anton" rel="stylesheet">
-    
+
+	<!-- librerias para video.js -->
+    <link href="http://vjs.zencdn.net/5.12.6/video-js.css" rel="stylesheet">
+	<script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-87916163-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </head>
 <body >
 		<div class="container">
@@ -32,7 +45,7 @@
 			<div class="col-md-11">
 				<div id="titulo">
 					<h1 class="titulo_h1">
-        				<a href="index.html"><img src="resource/img/logo_academia_sin_fondo.png" alt="Titulo de mi pagina web"  width="100px" height="100px" /></a>ACADEMIA VULCÁO DO FOGO
+        				<a href="index.html"><img src="resource/img/logo_academia_sin_fondo.png" alt="Titulo de mi pagina web"  width="100px" height="100px" id="agrandar"/></a>ACADEMIA VULCÁO DO FOGO
 
         			</h1>
 
@@ -40,8 +53,8 @@
      </div>
      <div class="col-md-1">
 				<div class="caja-redes">
-						<a href="https://www.facebook.com/Academia.JiuJitsu.Humberto.Fuentes/?fref=ts" class="icon-button facebook"  target="_blank"><i class="fa fa-facebook"></i><span></span></a>
-						<a href="https://www.instagram.com/vulcao_do_fogo/" class="icon-button2"  target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i><span></span></a>
+						<a href="https://www.facebook.com/Academia.JiuJitsu.Humberto.Fuentes/?fref=ts" target="_blank" ><img src="resource/img/facebook.png" alt=""><span></span></a>
+						<a href="https://www.instagram.com/vulcao_do_fogo/" target="_blank"><img src="resource/img/instagram.png" alt=""><span></span></a>
    				</div>
 
 
@@ -62,9 +75,9 @@
 					<div class="col-sm-12 pull-right nav-links min-hide">
 						<ul>
 							<li><a href="#">INICIO</a></li>
-							<li><a href="#">GALERIA</a></li>
-							<li><a href="#">NOTICIAS</a></li>
-							<li><a href="contacto.html">Contacto</a></li>
+							<li><a href="galeria.html">GALERIA</a></li>
+							<li><a href="noticias.html">NOTICIAS</a></li>
+							<li><a href="contacto.html">CONTACTO</a></li>
 						</ul>
 					</div>
 
@@ -82,9 +95,9 @@
       <div class="slider">
         <div class="ul-cont frontbg parallax">
           <ul class="parallax-bg">
-            <li class="slide-shown"><img src="resource/img/fotos/slider/IMG_3281.jpg" alt="imagen 1" /></li>
-            <li><img src="resource/img/fotos/slider/IMG_3263.jpg" alt="imagen 2" /></li>
-            <li><img src="resource/img/fotos/slider/escuchar.jpg" alt="imagen 3" /></li>
+            <li class="slide-shown"><img src="./resource/img/fotos/slider/equipo_mma.jpg" alt="imagen 1" /></li>
+            <li><img src="./resource/img/fotos/slider/equipo_jiujitsu.jpg" alt="imagen 2" height="20px" /></li>
+            <li><img src="./resource/img/fotos/slider/escuchar.jpg" alt="imagen 3" style="height: auto;"/></li>
           </ul>
         </div>
 
@@ -93,13 +106,13 @@
 
             <div class="slide-quotes">
               <div class="front-text">
-                <span class="ft-small fadetext-left">LA PRIMERA CLASE</span>
-                <span><span class="highlight fadetext-bottom"><span>ES</span></span> <span class="fadetext-right">GRATIS !</span></span>
+                <span class="ft-small fadetext-left"><!--LA PRIMERA CLASE--></span>
+                <span><span class="highlight fadetext-bottom"><span><!--ES --></span></span> <span class="fadetext-right"><!--GRATIS !--></span></span>
               </div>
 
               <div class="front-text">
-                <span class="ft-small fadetext-left">Nuestro</span>
-                <span><span class="highlight fadetext-bottom"><span>Equipo</span></span> <span class="fadetext-right">JIU JITSU</span></span>
+                <span class="ft-small fadetext-left"><!--Nuestro --></span>
+                <span><span class="highlight fadetext-bottom"><span><!--Equipo --></span></span> <span class="fadetext-right"><!--JIU JITSU--></span></span>
               </div>
 
               <div class="front-text" style="margin-left:400px;">
@@ -110,8 +123,6 @@
 
           </div>
         </div>
-        <a href="www.cartinnetwork.com">holasasss</a>
-
       </div> <!-- Slider -->
 
 
@@ -134,42 +145,45 @@
 
       <div class="row">
         <div class="col-lg-3" style="text-align:center;">
-          <img class="img-circle" src="resource/img/fotos/clases/bjjpng.png" alt="Generic placeholder image" width="140" height="140">
-          <h2>BraZilian Jiu Jitsu</h2>
-          <p>
-              El Jiu-Jitsu Brasileño es una forma y variación avanzada del Jujitsu Japonés. Ha sido modificado por la famosa familia Gracie de Brasil para convertirse “en uno de los sistemas más efectivo de Artes Marciales en el mundo“.</p>
-          <p><a class="btn btn-default" href="#" role="button">Ver detalles »</a></p>
+          <img class="img-circle" src="resource/img/fotos/clases/bjjpng.png" alt="Generic placeholder image" width="140" height="140" id="agrandar">
+          <h2>Brazilian Jiu Jitsu</h2><br><br> 
+          <p>El Brazilian Jiu Jitsu o Jiu Jitsu brasileño es una forma y variación avanzada del jujitsu japonés. Este ha sido modificado por la famosa familia Gracie de Brasil, para convertirse en uno de los sistemas más efectivo de las artes marciales en el mundo.</p>
+          <p><a class="btn btn-primary" href="resource/paginas_clases/jiujitsu.html" role="button">Ver detalles »</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-3" style="text-align:center;">
           <img class="img-circle" src="resource/img/fotos/clases/man4.png" alt="Generic placeholder image" width="140" height="140">
-          <h2>Acondicionamiento Fisico</h2>
-          <p>Desarrollo de la suma de cualidades físicas básicas, como: Velocidad, Fuerza, Resitencia, Flexibilidad. Pero antes de realizar cualquier tipo de actividad física, es muy importante realizar un calentamiento.</p>
-          <p><a class="btn btn-default" href="#" role="button">Ver detalles »</a></p>
+          <h2>Acondicionamiento Físico</h2>
+          <p>Es el desarrollo  de las cualidades físicas mediante el ejercicio, para obtener un estado general saludable. Las cualidades o capacidades físicas  del ser humano son la resistencia, la fuerza, la flexibilidad y la velocidad. Todas ellas están interrelacionadas entre sí...</p>
+          <p><a class="btn btn-primary" href="resource/paginas_clases/acondicionamiento.html" role="button">Ver detalles »</a></p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-3" style="text-align:center;">
+        <div class="col-lg-3" style="text-align:center;">	
           <img class="img-circle" src="resource/img/fotos/clases/defensa-personal.png" alt="Generic placeholder image" width="140" height="140">
-          <h2>Defensa personal</h2>
-          <p>MMA artes marciales mixtas, son un deporte de combate pleno que mezcla diferentes disciplinas tales como boxeo, taekwondo, muay thai, judo, lucha, jiu jitsu entre otras. Este deporte incorpora golpes, puños, patadas, técnicas de lucha agarres y lanzamientos.</p>
-          <p><a class="btn btn-default" href="#" role="button">Ver detalles »</a></p>
+          <h2>Defensa Personal</h2><br><br>
+          <p>La defensa personal consiste en un conjunto de habilidades técnico-tácticas encaminadas a impedir o repeler una agresión por parte de una o más personas, realizadas por y para uno mismo. Pudiendo utilizarse todo tipo de recursos disponibles sin más límite que el marcado en la legislación..</p>
+          <p><a class="btn btn-primary" href="resource/paginas_clases/defensa personal.html" role="button">Ver detalles »</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-3" style="text-align:center;">
-          <img class="img-circle" src="resource/img/fotos/clases/mma.jpg" alt="Generic placeholder image" width="140" height="140">
+          <img class="img-circle" src="resource/img/fotos/clases/img-mma02.png" alt="Generic placeholder image" width="140" height="140">
           <h2>Artes Marciales Mixtas</h2>
-          <p>MMA artes marciales mixtas, son un deporte de combate pleno que mezcla diferentes disciplinas tales como boxeo, taekwondo, muay thai, judo, lucha, jiu jitsu entre otras. Este deporte incorpora golpes, puños, patadas, técnicas de lucha agarres y lanzamientos.</p>
-          <p><a class="btn btn-default" href="#" role="button">Ver detalles »</a></p>
+          <p>MLas artes marciales mixtas o MMA por su nombre en inglés (mix martials arts) son un deporte de combate pleno, que mezcla diferentes disciplinas, tales como boxeo, taekwondo, muay thai, judo, lucha, jiu jitsu, entre otras. Este deporte incorpora golpes de puños y pies, ....</p>
+          <p><a class="btn btn-primary" href="resource/paginas_clases/mma.html" role="button">Ver detalles »</a></p>
         </div><!-- /.col-lg-4 -->
 
       </div> <!-- cierre Row -->
+   
 
       <div class="row" style="margin-top:100px;">
           <div class="col-md-12">
               <div class="col-md-7">
                   <h2 class="featurette-heading">Academia De Jiu jitsu <span class="text-muted">Humberto Fuentes</span></h2>
                   <p class="lead">Ven, conocemos y únete a nuestra academia, crece junto a nosotros, en las especialidades de Brazilian Jiu Jitsu, Artes Marciales Mixtas, Defensa Personal y Acondicionamiento Físico.
-Vulcáo Do Fogo, Mais que uma academia... uma familia.</p>
+                  Vulcáo Do Fogo, Mais que uma academia... uma familia.</p>
               </div>
           <div class="col-md-5">
-              <video src="resource/video/video-vulcao.mp4" controls autoplay loop muted preload="auto" poster="demo.jpg" >
+              <!--<video src="resource/video/video-vulcao.mp4" controls autoplay loop muted preload="auto" poster="demo.jpg" class="embed-responsive-item">
+              </video>-->
+              <video class="video-js vjs-default-skin" controls data-setup='{}'>
+              	<source src="resource/video/video-vulcao.mp4" type="video/mp4 "> 
               </video>
         </div>
       </div>
@@ -184,7 +198,7 @@ Vulcáo Do Fogo, Mais que uma academia... uma familia.</p>
                     <p>Academia de Jiu Jitsu Humberto Fuentes</p>
               </div>
               <div class="col-md-4">
-                    <p> © 2016 Desarrollado por Informatica Soluciones</p>
+                    <a href="https://www.facebook.com/alejandro17a"><p style="color:white;"> © 2016 Desarrollado por Informatica Soluciones</p></a>
               </div>
               <div class="col-md-4 lista_footer">
                     <ul>
@@ -197,5 +211,6 @@ Vulcáo Do Fogo, Mais que uma academia... uma familia.</p>
         </div> <!-- cierre col-md-12 -->
       </div><!-- cierre content_footer -->
     </footer>
+    <script src="http://vjs.zencdn.net/5.12.6/video.js"></script>
 </body>
 </html>

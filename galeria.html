@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lan="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="resource/img/fabicon">
+    <link rel="stylesheet" href="./resource/css/contacto.css" media="screen">
+    <link rel="stylesheet" href="./resource/css/thumbnail-gallery.css" media="screen">
+    <link rel="stylesheet" href="./resource/css/navbar.css" media="screen">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" href="./custom/style.css" media="screen" title="no title">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400|Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./resource/css/style.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="./js/toggle_navbar.js" type="text/javascript"></script>
+    <!--  libreria fancynox       -->
+      <script type="text/javascript" src="./resource/fancybox/lib/jquery-1.10.1.min.js"></script>
+      <script type="text/javascript" src="./resource/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+      <script type="text/javascript" src="./resource/fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
+      <link rel="stylesheet" type="text/css" href="./resource/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" /> 
+    <!--  fin importe fancybox      -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link href="./resource/css/style2.css" rel="stylesheet" type="text/css">
+    <title>Galeria</title>
+    <script type="text/javascript">
+    $(document).ready(function() {
+      /*
+       *  Simple image gallery. Uses default settings
+       */
+
+      $('.fancybox').fancybox();
+
+      /*
+       *  Different effects
+       */
+
+      // Change title type, overlay closing speed
+      $(".fancybox-effects-a").fancybox({
+        helpers: {
+          title : {
+            type : 'outside'
+          },
+          overlay : {
+            speedOut : 0
+          }
+        }
+      });
+
+      // Disable opening and closing animations, change title type
+      $(".fancybox-effects-b").fancybox({
+        openEffect  : 'none',
+        closeEffect : 'none',
+
+        helpers : {
+          title : {
+            type : 'over'
+          }
+        }
+      });
+
+      // Set custom style, close if clicked, change title type and overlay color
+      $(".fancybox-effects-c").fancybox({
+        wrapCSS    : 'fancybox-custom',
+        closeClick : true,
+
+        openEffect : 'none',
+
+        helpers : {
+          title : {
+            type : 'inside'
+          },
+          overlay : {
+            css : {
+              'background' : 'rgba(238,238,238,0.85)'
+            }
+          }
+        }
+      });
+
+      // Remove padding, set opening and closing animations, close if clicked and disable overlay
+      $(".fancybox-effects-d").fancybox({
+        padding: 0,
+
+        openEffect : 'elastic',
+        openSpeed  : 150,
+
+        closeEffect : 'elastic',
+        closeSpeed  : 150,
+
+        closeClick : true,
+
+        helpers : {
+          overlay : null
+        }
+      });
+
+      /*
+       *  Button helper. Disable animations, hide close button, change title type and content
+       */
+
+      $('.fancybox-buttons').fancybox({
+        openEffect  : 'none',
+        closeEffect : 'none',
+
+        prevEffect : 'none',
+        nextEffect : 'none',
+
+        closeBtn  : false,
+
+        helpers : {
+          title : {
+            type : 'inside'
+          },
+          buttons : {}
+        },
+
+        afterLoad : function() {
+          this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+        }
+      });
+
+
+      /*
+       *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
+       */
+
+      $('.fancybox-thumbs').fancybox({
+        prevEffect : 'none',
+        nextEffect : 'none',
+
+        closeBtn  : false,
+        arrows    : false,
+        nextClick : true,
+
+        helpers : {
+          thumbs : {
+            width  : 50,
+            height : 50
+          }
+        }
+      });
+
+      /*
+       *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
+      */
+      $('.fancybox-media')
+        .attr('rel', 'media-gallery')
+        .fancybox({
+          openEffect : 'none',
+          closeEffect : 'none',
+          prevEffect : 'none',
+          nextEffect : 'none',
+
+          arrows : false,
+          helpers : {
+            media : {},
+            buttons : {}
+          }
+        });
+
+      /*
+       *  Open manually
+       */
+
+      $("#fancybox-manual-a").click(function() {
+        $.fancybox.open('1_b.jpg');
+      });
+
+      $("#fancybox-manual-b").click(function() {
+        $.fancybox.open({
+          href : 'iframe.html',
+          type : 'iframe',
+          padding : 5
+        });
+      });
+
+      $("#fancybox-manual-c").click(function() {
+        $.fancybox.open([
+          {
+            href : '1_b.jpg',
+            title : 'My title'
+          }, {
+            href : '2_b.jpg',
+            title : '2nd title'
+          }, {
+            href : '3_b.jpg'
+          }
+        ], {
+          helpers : {
+            thumbs : {
+              width: 75,
+              height: 50
+            }
+          }
+        });
+      });
+
+
+    });
+  </script>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+      <div class="col-md-11">
+        <div id="titulo">
+          <h1 class="titulo_h1">
+                <a href="index.html"><img src="resource/img/logo_academia_sin_fondo.png" alt="Titulo de mi pagina web"  width="100px" height="100px" id="agrandar"/></a>ACADEMIA VULCÁO DO FOGO
+
+              </h1>
+
+            </div> <!-- cierre clase titulo -->
+     </div>
+     <div class="col-md-1">
+        <div class="caja-redes">
+            <a href="https://www.facebook.com/Academia.JiuJitsu.Humberto.Fuentes/?fref=ts" target="_blank" ><img src="resource/img/facebook.png" alt=""><span></span></a>
+            <a href="https://www.instagram.com/vulcao_do_fogo/" target="_blank"><img src="resource/img/instagram.png" alt=""><span></span></a>
+          </div>
+
+
+
+
+      </div> <!-- termina div de com-md-12 -->
+      </div><!-- termina div de row -->
+    </div>
+
+        <nav>
+  				<div class="container nav-bg">
+  					<div class="row">
+
+  						<div class="nav-menubtn">
+  							<span id="display-menu" class="icon-th-menu"></span>
+  						</div>
+
+  						<div class="col-sm-12 pull-right nav-links min-hide">
+  							<ul>
+  								<li><a href="index.html">INICIO</a></li>
+  								<li><a href="galeria.html">GALERIA</a></li>
+  								<li><a href="noticias.html">NOTICIAS</a></li>
+  								<li><a href="contacto.html">CONTACTO</a></li>
+  							</ul>
+  						</div>
+
+  					</div>
+  				</div>
+  			</nav>
+  			<div class="nav-margin"></div> <!-- Espaciador de navbar -->
+        
+        <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header fuentexd">Galeria</h1>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail fancybox" href="resource/img/fotos/galeria/IMG_3281.jpg" data-fancybox-group="gallery">
+                    <img class="img-responsive" src="resource/img/fotos/galeria/IMG_3281.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail fancybox" href="resource/img/fotos/galeria/IMG_3848.jpg" data-fancybox-group="gallery">
+                    <img class="img-responsive" src="resource/img/fotos/galeria/IMG_3848.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail fancybox" href="resource/img/fotos/galeria/IMG_3158-compressor.jpg" data-fancybox-group="gallery">
+                    <img class="img-responsive" src="resource/img/fotos/galeria/IMG_3158-compressor.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail fancybox" href="resource/img/fotos/galeria/IMG_3159-compressor.jpg" data-fancybox-group="gallery">
+                    <img class="img-responsive" src="resource/img/fotos/galeria/IMG_3159-compressor.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail fancybox" href="resource/img/fotos/galeria/IMG_3177-compressor.jpg" data-fancybox-group="gallery">
+                    <img class="img-responsive" src="resource/img/fotos/galeria/IMG_3177-compressor.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail fancybox" href="resource/img/fotos/galeria/IMG_3188-compressor.jpg" data-fancybox-group="gallery">
+                    <img class="img-responsive" src="resource/img/fotos/galeria/IMG_3188-compressor.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail fancybox" href="resource/img/fotos/galeria/IMG_3223-compressor.jpg" data-fancybox-group="gallery">
+                    <img class="img-responsive" src="resource/img/fotos/galeria/IMG_3223-compressor.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail fancybox" href="resource/img/fotos/galeria/IMG_3228-compressor.jpg" data-fancybox-group="gallery">
+                    <img class="img-responsive" src="resource/img/fotos/galeria/IMG_3228-compressor.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail fancybox" href="resource/img/fotos/galeria/IMG_3248-compressor.jpg" data-fancybox-group="gallery">
+                    <img class="img-responsive" src="resource/img/fotos/galeria/IMG_3248-compressor.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail fancybox" href="resource/img/fotos/galeria/IMG_3255-compressor.jpg" data-fancybox-group="gallery">
+                    <img class="img-responsive" src="resource/img/fotos/galeria/IMG_3255-compressor.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail fancybox" href="resource/img/fotos/galeria/IMG_3263-compressor.jpg" data-fancybox-group="gallery">
+                    <img class="img-responsive" src="resource/img/fotos/galeria/IMG_3263-compressor.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail fancybox" href="resource/img/fotos/galeria/IMG_3848.jpg" data-fancybox-group="gallery">
+                    <img class="img-responsive" src="resource/img/fotos/galeria/IMG_3848.jpg" alt="">
+                </a>
+            </div>
+        </div>
+        </div><!-- cierre container galeria-->
+  
+  <footer class="footer">
+    <div class="context_footer">
+        <div class="col-md-12">
+              <div class="col-md-4">
+                    <p>Academia de Jiu Jitsu Humberto Fuentes</p>
+              </div>
+              <div class="col-md-4">
+                    <a href="https://www.facebook.com/alejandro17a"><p style="color:white;"> © 2016 Desarrollado por Informatica Soluciones</p></a>
+              </div>
+              <div class="col-md-4 lista_footer">
+                    <ul>
+                    <li class="li_footer"><a href="#">Inicio</a></li>
+                    <li class="li_footer"><a href="#">Galeria</a></li>
+                    <li class="li_footer"><a href="#">Noticias</a></li>
+                    <li class="li_footer"><a href="contacto.html">Quienes Somos</a></li>
+                  </ul>
+              </div>
+        </div> <!-- cierre col-md-12 -->
+      </div><!-- cierre content_footer -->
+    </footer>
+  </body>
+</html>
